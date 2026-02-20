@@ -36,18 +36,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
+		// These variables store responses supporting them
+		// allergies or a cold
         var allergy_count = 0;
         var cold_count = 0;
 
-
+		// This code is active when a user selects a response
+		// an allergy-based answer
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 
         }
 
+		// This code is active when a user selects a response
+		// an cold-based answer
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+
+		// This code calculates the percentages
+		// also presents them on the results page at the end
 		function calculateResults(){
 			war total = allergy_count + cold_count;
 
@@ -88,7 +96,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
-<!-this code sets up the first page witb a color and a name-->
+<!-this code sets up the first page with a color and a name-->
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
 </div>
@@ -104,6 +112,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!-this code is closed-->
 	
 </div> <!-- adding this because it seems to be missing????? -->
+	
 <!-this code opens a new page with question 1-->
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -177,13 +186,44 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#six" onclick="allergyAdd()" class="w3-btn w3-green w3-round">Yes</a> <!-- Yes they improve -->
 		<a href="#six" onclick="coldAdd()" class="w3-btn w3-red w3-round">No</a> <!-- No they do not improve -->
 	</div>
+</div>
 <!-- This code is closed -->
 
 <!-- This code is for question 6 and opens a new page -->
-<!-- This code adss a footer -->
+	<div class="page" id="six">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have any aches or pains in your body?</p> <!--Question 6-->
+	</div>
+		<a href="#six" onclick="coldAdd()" class="w3-btn w3-green w3-round">Yes</a> <!-- Yes they have body aches -->
+		<a href="#six" onclick="allergyAdd()" class="w3-btn w3-red w3-round">No</a> <!-- No they do not have body aches -->
+	</div>
+</div>
+<!-- This code is closed -->
+
+<!-- This code adds a new page and a results page -->
+<div class="page" id="resultsPage">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Your Results</h1>
+	</div>
+
+	<div class="w3-container">
+		<button onclick="calculateResults()" class="w3-btn w3-blue w-round"> <button onclick="calculateResults()"
+			Calculate results
+		</button> <!-- This creates the clickable button/runs the fucntion to calculate the results -->
+		<!-- This paragraph is filled by JavaScript-->
+		<p id="results"></p>
+	</div>
+</div>
+	
+<!-- This code ads a footer -->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
 
 </body>
 </html>
+<!-- This code is closed -->
