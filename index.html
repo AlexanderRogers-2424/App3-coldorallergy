@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The goal of the code is to allow someone to distinguish whether they have a cold or allergies. This would allow them to easily diagnose and treat themselves acordingly.
  
 Known Issues:
 blah, blah, blah, blah
@@ -198,8 +198,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Do you have any aches or pains in your body?</p> <!--Question 6-->
 	</div>
-		<a href="#six" onclick="coldAdd()" class="w3-btn w3-green w3-round">Yes</a> <!-- Yes they have body aches -->
-		<a href="#six" onclick="allergyAdd()" class="w3-btn w3-red w3-round">No</a> <!-- No they do not have body aches -->
+		<a href="#resultsPage" onclick="coldAdd()" class="w3-btn w3-green w3-round">Yes</a> <!-- Yes they have body aches -->
+		<a href="#resultsPage" onclick="allergyAdd()" class="w3-btn w3-red w3-round">No</a> <!-- No they do not have body aches -->
 	</div>
 </div>
 <!-- This code is closed -->
@@ -211,8 +211,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 
 	<div class="w3-container">
-		<button onclick="calculateResults()" class="w3-btn w3-blue w-round"> <button onclick="calculateResults()"
-			Calculate results
+		<button onclick="calculateResults()" class="w3-btn w3-blue w-round">
+			Calculate Results
 		</button> <!-- This creates the clickable button/runs the fucntion to calculate the results -->
 		<!-- This paragraph is filled by JavaScript-->
 		<p id="results"></p>
