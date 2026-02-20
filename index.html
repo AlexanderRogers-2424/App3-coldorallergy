@@ -112,6 +112,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Are your eyes watery or itchy?</p> <!-- Question 1 --> 
+	</div>
 		<a href="#two" oneclick="allergyAdd()" class="w3-btn w-3green w-3round">Yes</a> <!-- Yes increases allergy count -->
 		<a href="#two" oneclick="coldAdd()" class="w3-btn w3-round">No</a> <!-- No increases in cold count-->
 		
@@ -121,12 +122,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <!-- This code is for question 2 and opens a new page -->
 <div class="page" id="two">
-	<div class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p> <!--Question 2-->
+	</div>
 		<a href="#three" onclick="coldAdd()" class="w3-btn w3-green w3-round">Yes</a> <!-- Yes fever is present -->
 		<a href="#three" onclick="allergyAdd()" class="w3-btn w3-red w3-round">No</a> <!-- No fever is not present -->
 	</div>
@@ -135,12 +137,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <!-- This code is for question 3 and opens a new page -->
 <div class="page" id="three">
-	<div class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
 	</div>
 
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p> <!--Question 3-->
+	</div>
 		<a href="#four" onclick="coldAdd()" class="w3-btn w3-green w3-round">Yes</a> <!-- Yes sore throat is present -->
 		<a href="#four" onclick="allergyAdd()" class="w3-btn w3-red w3-round">No</a> <!-- No sore throat is not present -->
 	</div>
