@@ -57,15 +57,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		// This code calculates the percentages
 		// also presents them on the results page at the end
 		function calculateResults(){
-			war total = allergy_count + cold_count;
+			var total = allergy_count + cold_count;
 
-			car allergyPercent = (allergy_count / total) * 100;
+			var allergyPercent = (allergy_count / total) * 100;
 			var coldPercent = (cold_count / total) * 100;
 
 			var resultsText = document.gelElementByID("results");
 
 			resultTest.innerHTML = 
-				"Probability it is Allergies: " + allergyPercent + "% <br> + 
+				"Probability it is Allergies: " + allergyPercent + "% <br>" + 
 				"Probability it is a Cold: " + coldPercent + "%";
 		}
 
