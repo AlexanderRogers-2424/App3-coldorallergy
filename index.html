@@ -126,14 +126,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do ou have a fever?</p> <!--Question 2-->
+		<p>Do you have a fever?</p> <!--Question 2-->
 		<a href="#three" onclick="coldAdd()" class="w3-btn w3-green w3-round">Yes</a> <!-- Yes fever is present -->
-		<a href="three" onclick="allergyAdd()" class="w3-btn w3-red w3-round">No</a> <!-- No fever is not present -->
+		<a href="#three" onclick="allergyAdd()" class="w3-btn w3-red w3-round">No</a> <!-- No fever is not present -->
 	</div>
 </div>	
 <!-- Code is closed -->
 
 <!-- This code is for question 3 and opens a new page -->
+	<div class="page" id="three">
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 3</h1>
+		</div>
+
+		<div class="w3-container">
+			<p>Do you have a sore throat?</p> <!--Question 3-->
+
+			<a href="#four" onclick="coldAdd()" class="w3-btn w3-green w3-round">Yes</a> <!-- Yes sore throat is present -->
+		<a href="#four" onclick="allergyAdd()" class="w3-btn w3-red w3-round">No</a> <!-- No sore throat is not present -->
+		</div>
+	</div>
+<!-- Code is closed -->
+
+<!-- This code is for question 4 and opens a new page -->
 	
 <!-- This code adss a footer -->
 <footer class="w3-bottom w3-container w3-flat-carrot">
