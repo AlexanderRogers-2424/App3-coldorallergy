@@ -38,6 +38,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
 		// These variables store responses supporting them
 		// allergies or a cold
+	var totalQuestions =6
         var allergy_count = 0;
         var cold_count = 0;
 
@@ -57,14 +58,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		// This code calculates the percentages
 		// also presents them on the results page at the end
 		function calculateResults(){
-			var total = allergy_count + cold_count;
+			var allergyPercent = (allergy_count / totalQuestions) * 100;
 
-			var allergyPercent = (allergy_count / total) * 100;
-			var coldPercent = (cold_count / total) * 100;
+			var coldPercent = (cold_count / totalQuestions) * 100;
+			
+			var totalPercent = allergy_count + cold_count;
 
-			var resultsText = document.getElementById("results");
+			var resultsText = document.getElementById("resultText");
 
-			resultsTest.innerHTML = 
+			resultsText.innerHTML = 
 				"Probability it is Allergies: " + allergyPercent + "% <br>" + 
 				"Probability it is a Cold: " + coldPercent + "%";
 		}
