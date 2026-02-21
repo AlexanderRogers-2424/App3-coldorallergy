@@ -62,7 +62,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			var allergyPercent = (allergy_count / total) * 100;
 			var coldPercent = (cold_count / total) * 100;
 
-			var resultsText = document.gelElementByID("results");
+			var resultsText = document.getElementById("results");
 
 			resultTest.innerHTML = 
 				"Probability it is Allergies: " + allergyPercent + "% <br>" + 
@@ -122,8 +122,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container">
         <p>Are your eyes watery or itchy?</p> <!-- Question 1 --> 
 	</div>
-		<a href="#two" oneclick="allergyAdd()" class="w3-btn w-3green w-3round">Yes</a> <!-- Yes increases allergy count -->
-		<a href="#two" oneclick="coldAdd()" class="w3-btn w3-round">No</a> <!-- No increases in cold count-->
+		<a href="#two" onclick="allergyAdd()" class="w3-btn w-3green w-3round">Yes</a> <!-- Yes increases allergy count -->
+		<a href="#two" onclick="coldAdd()" class="w3-btn w3-round">No</a> <!-- No increases in cold count-->
 		
     	</div>
 </div>
