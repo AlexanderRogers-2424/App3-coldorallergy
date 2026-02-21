@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Alex Rogers
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 The goal of the code is to allow someone to distinguish whether they have a cold or allergies. This would allow them to easily diagnose and treat themselves acordingly.
  
 Known Issues:
-blah, blah, blah, blah
+There are several known issues with the notion of diagnosis in general. People frequently misconstrue various symptoms with illnesses that inevitably become destrimental for patients. This code seeks to generate an effective diagnosis site for patients and reduce these issues.
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -36,36 +36,36 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-		// These variables store responses supporting them
-		// allergies or a cold
+		// These variables store responses supporting them//
+		// allergies or a cold//
+		// This code also indicates how many questions are present//
 	var totalQuestions =6;
         var allergy_count = 0;
         var cold_count = 0;
 
-		// This code is active when a user selects a response
-		// an allergy-based answer
+		// This code is active and increases the allergy count by 1 when a user selects an allergy-based answer//
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 
         }
 
-		// This code is active when a user selects a response
-		// an cold-based answer
+		// This code is active and increases the cold count by 1 when a user selects a cold-based answer//
         function coldAdd(){
             cold_count = cold_count + 1;
         }
 
-		// This code calculates the percentages
-		// also presents them on the results page at the end
+		// This code calculates the percentages//
+		// also presents them on the results page at the end by establishing the result text as an ID that will trigger the results//
 		function calculateResults(){
+			//Calculates allergy percentage//
 			var allergyPercent = (allergy_count / totalQuestions) * 100;
-
+			//Calculates cold percentage//
 			var coldPercent = (cold_count / totalQuestions) * 100;
 			
 			var totalPercent = allergy_count + cold_count;
-
+			//This code allows Javascript to modify what is shown on the page//
 			var resultsText = document.getElementById("resultsText");
-
+		//This code generates the content of the results by setting the formula used//
 			resultsText.innerHTML = 
 				"Probability it is Allergies: " + allergyPercent + "% <br>" + 
 				"Probability it is a Cold: " + coldPercent + "%";
@@ -170,8 +170,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Are your symptons seasonal or chronic?</p> <!--Question 4-->
 	</div>
-		<a href="#five" onclick="allergyAdd()" class="w3-btn w3-green w3-round">Yes</a> <!-- Yes allergies are seasonal -->
-		<a href="#five" onclick="coldAdd()" class="w3-btn w3-red w3-round">No</a> <!-- No allergies are not seasonal -->
+		<a href="#five" onclick="allergyAdd()" class="w3-btn w3-green w3-round">Yes</a> <!-- Yes allergies are seasonal pointing to allergy-->
+		<a href="#five" onclick="coldAdd()" class="w3-btn w3-red w3-round">No</a> <!-- No allergies are not seasonal pointing to cold-->
 	</div>
 </div>
 <!-- This code is closed -->
@@ -185,8 +185,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Do your symptoms improve with an antihistamine?</p> <!--Question 5-->
 	</div>
-		<a href="#six" onclick="allergyAdd()" class="w3-btn w3-green w3-round">Yes</a> <!-- Yes they improve -->
-		<a href="#six" onclick="coldAdd()" class="w3-btn w3-red w3-round">No</a> <!-- No they do not improve -->
+		<a href="#six" onclick="allergyAdd()" class="w3-btn w3-green w3-round">Yes</a> <!-- Yes symptoms improve with antihistamine -->
+		<a href="#six" onclick="coldAdd()" class="w3-btn w3-red w3-round">No</a> <!-- No they do not improve with antihistamine -->
 	</div>
 </div>
 <!-- This code is closed -->
@@ -221,6 +221,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p id="resultsText"></p>
 	</div>
 </div>
+<!-- This code is closed -->
 	
 <!-- This code ads a footer -->
 <footer class="w3-bottom w3-container w3-flat-carrot">
